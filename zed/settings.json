@@ -28,7 +28,8 @@
 	// Theme & Icons
 	"theme": "Zen Abyssal Blur",
 	// Zed
-	"ui_font_size": 16,
+	"ui_font_size": 12,
+	"ui_font_family": "Monaspace Krypton NF",
 
 	// ---------------------------------------
 	// Editor settings
@@ -36,7 +37,19 @@
 	"inlay_hints": {
 		"enabled": false
 	},
+	"format_on_save": "on",
+	"current_line_highlight": "all",
 	"buffer_font_size": 12,
+	"buffer_font_family": "Monaspace Krypton NF",
+	"buffer_font_features": {
+		"liga": true,
+		"clig": true,
+		"dlig": true,
+		"calt": true,
+		"ss01": true,
+		"ss02": true,
+		"ss03": true
+	},
 	"indent_guides": {
 		"line_width": 1,
 		"active_line_width": 2,
@@ -55,12 +68,11 @@
 		"CSS": { "formatter": { "language_server": { "name": "biome" } } },
 		"Astro": { "formatter": { "language_server": { "name": "biome" } } },
 		"Vue.js": { "formatter": { "language_server": { "name": "biome" } } }
-	}
+	},
 
 	// ---------------------------------
 	// LLM
 	// ---------------------------------
-	//
 	//
 	// ---------------------------------
 
