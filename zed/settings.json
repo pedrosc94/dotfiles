@@ -14,9 +14,6 @@
 		"diagnostics": false,
 		"metrics": false
 	},
-	"git_panel": {
-		"dock": "right"
-	},
 
 	// ---------------------------------------
 	// UI settings
@@ -26,10 +23,25 @@
 	// Cursor
 	"cursor_shape": "underline",
 	// Theme & Icons
-	"theme": "Catppuccin Espresso (Blur) [Light]",
+	"theme": "Zoegi Dark",
 	// Zed
 	"ui_font_size": 12,
-	"ui_font_family": "Monaspace Krypton NF",
+	"ui_font_family": "MonaspiceKr Nerd Font Mono",
+	// Project Panel
+	"project_panel": {
+		"indent_guides": {
+			"show": "always"
+		},
+		"indent_size": 10.0
+	},
+	// Outline Panel
+	"outline_panel": {
+		"indent_size": 10.0
+	},
+	// Git Panel
+	"git_panel": {
+		"dock": "right"
+	},
 
 	// ---------------------------------------
 	// Editor settings
@@ -38,9 +50,10 @@
 		"enabled": false
 	},
 	"format_on_save": "on",
+	"hard_tabs": false,
 	"current_line_highlight": "all",
 	"buffer_font_size": 12,
-	"buffer_font_family": "Monaspace Krypton NF",
+	"buffer_font_family": "MonaspiceKr Nerd Font Mono",
 	"buffer_font_features": {
 		"liga": true,
 		"clig": true,
@@ -51,44 +64,70 @@
 		"ss03": true
 	},
 	"indent_guides": {
-		"line_width": 1,
-		"active_line_width": 2,
+		"background_coloring": "disabled",
+		"line_width": 4,
+		"active_line_width": 6,
 		"coloring": "indent_aware"
 	},
 
 	// ---------------------------------
-	// Languages
+	// Languages & Linting & Formatting
 	// ---------------------------------
 	"languages": {
-		"JSON": { "formatter": { "language_server": { "name": "biome" } } },
-		"JSONC": { "formatter": { "language_server": { "name": "biome" } } },
-		"JavaScript": { "formatter": { "language_server": { "name": "biome" } } },
-		"TypeScript": { "formatter": { "language_server": { "name": "biome" } } },
-		"TSX": { "formatter": { "language_server": { "name": "biome" } } },
-		"CSS": { "formatter": { "language_server": { "name": "biome" } } },
-		"Astro": { "formatter": { "language_server": { "name": "biome" } } },
-		"Vue.js": { "formatter": { "language_server": { "name": "biome" } } }
+		"JSON": {
+			"formatter": { "language_server": { "name": "biome" } }
+		},
+		"JSONC": {
+			"formatter": { "language_server": { "name": "biome" } }
+		},
+		"JavaScript": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+		"TypeScript": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+		"TSX": {
+			"formatter": { "language_server": { "name": "biome" } },
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		},
+		"CSS": {
+			"formatter": { "language_server": { "name": "biome" } }
+		},
+		"Astro": {
+			"formatter": { "language_server": { "name": "biome" } }
+		},
+		"Vue.js": {
+			"formatter": { "language_server": { "name": "biome" } }
+		}
 	},
 
 	// ---------------------------------
-	// LLM
+	// Agent settings
 	// ---------------------------------
-	/*
-	"agent_servers": {
-		"your_agent": {
-			"command": "path_to_executable",
-			"args": [],
-			"env": {}
-		}
+	"agent": {
+		"always_allow_tool_actions": true,
+		"default_profile": "write",
+		"default_model": {
+			"provider": "ollama",
+			"model": "mistral:latest"
+		},
+		"model_parameters": []
 	},
-	*/
-	// ---------------------------------
 
 	// ---------------------------------------
 	// Terminal settings
 	// ---------------------------------------
-	/**
-   * Linux settings
   "terminal": {
     "shell": {
       "with_arguments": {
@@ -97,10 +136,10 @@
       }
     }
   },
-  */
+
 	/**
-	 * Windows settings
-	 */
+	* Windows settings
+	*
 	"terminal": {
 		"shell": {
 			"with_arguments": {
@@ -109,4 +148,5 @@
 			}
 		}
 	}
+	*/
 }
